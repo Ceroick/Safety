@@ -1,0 +1,97 @@
+:root {
+    --background-color: #1a1b26;
+    --primary-text-color: #c0caf5;
+    --accent-color: #7aa2f7;
+    --card-background-color: #24283b;
+    --border-color: #414868;
+    --button-background-color: #7aa2f7;
+    --button-text-color: #ffffff;
+    --success-color: #9ece6a;
+    --error-color: #f77285;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 2rem;
+}
+
+.admin-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--card-background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+#logout-btn {
+    background-color: var(--error-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+#users-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#users-table th, #users-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#users-table th {
+    font-weight: 600;
+}
+
+.status-pending {
+    color: #ff9e64; /* Naranja para pendiente */
+    font-weight: bold;
+}
+
+.status-approved {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.action-btn {
+    border: none;
+    color: var(--button-text-color);
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.approve-btn {
+    background-color: var(--success-color);
+}
+
+.reject-btn {
+    background-color: var(--error-color);
+}

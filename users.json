@@ -1,0 +1,14 @@
+[
+  {
+    "username": "Jose_Duque",
+    "passwordHash": "$2b$10$3B7cDXnPu4fDUWzqh4cMJeIfSvrERurCs9Hj6.xQjqg2TsT/Myj.C",
+    "role": "admin",
+    "status": "approved"
+  },
+  {
+    "username": "test_user",
+    "passwordHash": "$2b$10$.tvZbzPMjHXDrHAkUdMuRuO.fsBQfSoKLOqBnvmpH4445UH3yUmVy",
+    "role": "user",
+    "status": "approved"
+  }
+]
