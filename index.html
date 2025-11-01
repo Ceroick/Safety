@@ -1,19 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Program</title>
+    <title>Plataforma de Estudio de Medicina</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <div class="quiz-container">
-            <div id="question"></div>
-            <div id="answers"></div>
-            <button id="next-btn">Next</button>
+    <header>
+        <div class="logo">RacMed</div>
+        <nav>
+            <a href="#" class="nav-link">Inicio</a>
+            <a href="#" class="nav-link active">Temas</a>
+            <a href="#" class="nav-link">Tips</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="app">
+            <div id="module-selection-container">
+                <div class="main-header">
+                    <h1>SemLock</h1>
+                    <p>Plataforma de estudio de medicina — apuntes interactivos, flashcards y ejercicios.</p>
+                </div>
+                <div class="main-actions">
+                    <input type="text" placeholder="Buscar temas, conceptos o fármacos...">
+                    <button class="explore-btn">Explorar Temas</button>
+                </div>
+                <div class="section-title">
+                    <h2>Temas</h2>
+                    <div class="filters">
+                        <button class="filter-btn active">Todos</button>
+                        <button class="filter-btn">Neurología</button>
+                        <button class="filter-btn">Salud Mental</button>
+                        <button class="filter-btn">Fármaco</button>
+                    </div>
+                </div>
+                <div id="module-list"></div>
+            </div>
+            <div class="quiz-container hidden">
+                <h2 id="quiz-title"></h2>
+                <div id="question"></div>
+                <div id="answers"></div>
+                <div class="quiz-navigation">
+                    <button id="back-to-modules-btn">Volver a los Módulos</button>
+                    <button id="next-btn">Siguiente</button>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>

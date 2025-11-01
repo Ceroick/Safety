@@ -1,29 +1,193 @@
-const questions = [
-    {
-        question: "What is 2 + 2?",
-        answers: [
-            { text: "4", correct: true },
-            { text: "3", correct: false },
-            { text: "5", correct: false },
-            { text: "6", correct: false }
+const modules = {
+    "Generalidades": {
+        category: "Neurología",
+        description: "Introducción a los fundamentos de la medicina y conceptos básicos.",
+        questions: [
+            { question: "Pregunta de ejemplo de Generalidades 1", answers: [{ text: "Respuesta A", correct: true }, { text: "Respuesta B", correct: false }] },
+            { question: "Pregunta de ejemplo de Generalidades 2", answers: [{ text: "Respuesta A", correct: true }, { text: "Respuesta B", correct: false }] }
         ]
     },
-    {
-        question: "What is the capital of France?",
-        answers: [
-            { text: "Berlin", correct: false },
-            { text: "Madrid", correct: false },
-            { text: "Paris", correct: true },
-            { text: "Rome", correct: false }
+    "Modulo 1 (Generalidades y Hemático)": {
+        category: "Fármaco",
+        description: "Conceptos básicos de farmacología y sistema hemático.",
+        questions: [
+            { question: "Pregunta de ejemplo del Modulo 1", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Antibióticos 101": {
+        category: "Fármaco",
+        description: "Coberturas básicas, familias y reglas mnemotécnicas.",
+        questions: [
+            { question: "Pregunta de ejemplo del Modulo 2", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Antimicrobianos II": {
+        category: "Fármaco",
+        description: "Segunda parte de antimicrobianos, farmacos especiales y más.",
+        questions: [
+            { question: "Pregunta de ejemplo del Modulo 3", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Dolor y SNC": {
+        category: "Neurología",
+        description: "Manejo del dolor y farmacología del Sistema Nervioso Central.",
+        questions: [
+            { question: "Pregunta de ejemplo del Modulo 4", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "SNA y Cardiovascular": {
+        category: "Fármaco",
+        description: "Farmacología del Sistema Nervioso Autónomo y Cardiovascular.",
+        questions: [
+            { question: "Pregunta de ejemplo del Modulo 5", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Endocrino y más": {
+        category: "Fármaco",
+        description: "Farmacología de Endocrino, Respiratorio y Digestivo.",
+        questions: [
+            { question: "Pregunta de ejemplo del Modulo 6", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Farmacocinética": {
+        category: "Casos Clínicos",
+        description: "Caso clínico sobre los principios de la farmacocinética.",
+        questions: [
+            { question: "Pregunta de ejemplo de Farmacocinética", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Neumonía": {
+        category: "Casos Clínicos",
+        description: "Caso clínico: Neumonía adquirida en la comunidad.",
+        questions: [
+            { question: "Pregunta de ejemplo de Neumonía", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Infección Urinaria": {
+        category: "Casos Clínicos",
+        description: "Caso clínico: Infección de vías urinarias.",
+        questions: [
+            { question: "Pregunta de ejemplo de IVU", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Infección de Piel": {
+        category: "Casos Clínicos",
+        description: "Caso clínico: Infección de piel y tejidos blandos.",
+        questions: [
+            { question: "Pregunta de ejemplo de Piel", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Malaria": {
+        category: "Casos Clínicos",
+        description: "Caso clínico: Malaria.",
+        questions: [
+            { question: "Pregunta de ejemplo de Malaria", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Dolor": {
+        category: "Casos Clínicos",
+        description: "Caso clínico: Dolor.",
+        questions: [
+            { question: "Pregunta de ejemplo de Dolor", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Dolor Crónico": {
+        category: "Casos Clínicos",
+        description: "Caso clínico: Dolor crónico.",
+        questions: [
+            { question: "Pregunta de ejemplo de Dolor Crónico", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Migraña": {
+        category: "Casos Clínicos",
+        description: "Caso clínico: Migraña.",
+        questions: [
+            { question: "Pregunta de ejemplo de Migraña", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Hipertensión": {
+        category: "Casos Clínicos",
+        description: "Caso Clínico: Hipertensión arterial.",
+        questions: [
+            { question: "Pregunta de ejemplo de HTA", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Cardiopatía Isquémica": {
+        category: "Casos Clínicos",
+        description: "Caso Clínico: Cardiopatía isquémica.",
+        questions: [
+            { question: "Pregunta de ejemplo de Cardiopatía", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Falla Cardiaca": {
+        category: "Casos Clínicos",
+        description: "Caso Clínico: Falla cardiaca.",
+        questions: [
+            { question: "Pregunta de ejemplo de Falla Cardiaca", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Diabetes Mellitus": {
+        category: "Casos Clínicos",
+        description: "Caso Clínico: Diabetes mellitus.",
+        questions: [
+            { question: "Pregunta de ejemplo de Diabetes", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "EPOC": {
+        category: "Casos Clínicos",
+        description: "Caso Clínico: Enfermedad pulmonar obstructiva crónica.",
+        questions: [
+            { question: "Pregunta de ejemplo de EPOC", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
+        ]
+    },
+    "Club de Revistas": {
+        category: "Investigación",
+        description: "Exposición 2 (Club de revistas - artículo científico) (IdC) (M-activa).",
+        questions: [
+            { question: "Pregunta de ejemplo de Exposición", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
         ]
     }
-];
+};
 
+const moduleSelectionContainer = document.getElementById("module-selection-container");
+const moduleListElement = document.getElementById("module-list");
+const quizContainer = document.querySelector(".quiz-container");
+const quizTitleElement = document.getElementById("quiz-title");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answers");
 const nextButton = document.getElementById("next-btn");
+const backToModulesButton = document.getElementById("back-to-modules-btn");
 
+let currentQuestions = [];
 let currentQuestionIndex = 0;
+
+function showModules() {
+    quizContainer.classList.add("hidden");
+    moduleSelectionContainer.classList.remove("hidden");
+    moduleListElement.innerHTML = "";
+
+    for (const moduleName in modules) {
+        const module = modules[moduleName];
+        const card = document.createElement("div");
+        card.classList.add("module-card");
+        card.innerHTML = `
+            <div class="module-category">${module.category}</div>
+            <h3>${moduleName}</h3>
+            <p>${module.description}</p>
+            <button class="open-btn">Abrir</button>
+        `;
+        card.addEventListener("click", () => selectModule(moduleName));
+        moduleListElement.appendChild(card);
+    }
+}
+
+function selectModule(moduleName) {
+    currentQuestions = modules[moduleName].questions;
+    moduleSelectionContainer.classList.add("hidden");
+    quizContainer.classList.remove("hidden");
+    quizTitleElement.innerText = moduleName;
+    startQuiz();
+}
 
 function startQuiz() {
     currentQuestionIndex = 0;
@@ -32,7 +196,7 @@ function startQuiz() {
 
 function showQuestion() {
     resetState();
-    let currentQuestion = questions[currentQuestionIndex];
+    let currentQuestion = currentQuestions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
@@ -74,14 +238,15 @@ function selectAnswer(e) {
 
 function handleNextButton() {
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
+    if (currentQuestionIndex < currentQuestions.length) {
         showQuestion();
     } else {
-        alert("You have finished the quiz!");
-        startQuiz();
+        alert("¡Has terminado el cuestionario!");
+        showModules();
     }
 }
 
 nextButton.addEventListener("click", handleNextButton);
+backToModulesButton.addEventListener("click", showModules);
 
-startQuiz();
+showModules();
