@@ -225,6 +225,16 @@ main {
     background-color: #3e4465;
 }
 
+.answer-btn.correct {
+    background-color: #2e7d32; /* Verde oscuro para éxito */
+    border-color: #66bb6a;
+}
+
+.answer-btn.incorrect {
+    background-color: #c62828; /* Rojo oscuro para error */
+    border-color: #ef5350;
+}
+
 .quiz-navigation {
     display: flex;
     justify-content: space-between;

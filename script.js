@@ -1,10 +1,30 @@
 const modules = {
-    "Generalidades": {
-        category: "Neurología",
-        description: "Introducción a los fundamentos de la medicina y conceptos básicos.",
+    "General": {
+        category: "Fármaco",
+        description: "Incluye todas las preguntas de todos los módulos para un estudio completo.",
         questions: [
             { question: "Pregunta de ejemplo de Generalidades 1", answers: [{ text: "Respuesta A", correct: true }, { text: "Respuesta B", correct: false }] },
-            { question: "Pregunta de ejemplo de Generalidades 2", answers: [{ text: "Respuesta A", correct: true }, { text: "Respuesta B", correct: false }] }
+            { question: "Pregunta de ejemplo de Generalidades 2", answers: [{ text: "Respuesta A", correct: true }, { text: "Respuesta B", correct: false }] },
+            { question: "Pregunta de ejemplo del Modulo 1", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo del Modulo 2", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo del Modulo 3", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo del Modulo 4", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo del Modulo 5", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo del Modulo 6", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo de Farmacocinética", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo de Neumonía", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo de IVU", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo de Piel", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo de Malaria", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo de Dolor", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo de Dolor Crónico", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo de Migraña", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo de HTA", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo de Cardiopatía", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo de Falla Cardiaca", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo de Diabetes", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo de EPOC", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] },
+            { question: "Pregunta de ejemplo de Exposición", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
         ]
     },
     "Modulo 1 (Generalidades y Hemático)": {
@@ -29,7 +49,7 @@ const modules = {
         ]
     },
     "Dolor y SNC": {
-        category: "Neurología",
+        category: "Fármaco",
         description: "Manejo del dolor y farmacología del Sistema Nervioso Central.",
         questions: [
             { question: "Pregunta de ejemplo del Modulo 4", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
@@ -50,98 +70,98 @@ const modules = {
         ]
     },
     "Farmacocinética": {
-        category: "Casos Clínicos",
+        category: "Fármaco",
         description: "Caso clínico sobre los principios de la farmacocinética.",
         questions: [
             { question: "Pregunta de ejemplo de Farmacocinética", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
         ]
     },
     "Neumonía": {
-        category: "Casos Clínicos",
+        category: "Fármaco",
         description: "Caso clínico: Neumonía adquirida en la comunidad.",
         questions: [
             { question: "Pregunta de ejemplo de Neumonía", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
         ]
     },
     "Infección Urinaria": {
-        category: "Casos Clínicos",
+        category: "Fármaco",
         description: "Caso clínico: Infección de vías urinarias.",
         questions: [
             { question: "Pregunta de ejemplo de IVU", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
         ]
     },
     "Infección de Piel": {
-        category: "Casos Clínicos",
+        category: "Fármaco",
         description: "Caso clínico: Infección de piel y tejidos blandos.",
         questions: [
             { question: "Pregunta de ejemplo de Piel", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
         ]
     },
     "Malaria": {
-        category: "Casos Clínicos",
+        category: "Fármaco",
         description: "Caso clínico: Malaria.",
         questions: [
             { question: "Pregunta de ejemplo de Malaria", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
         ]
     },
     "Dolor": {
-        category: "Casos Clínicos",
+        category: "Fármaco",
         description: "Caso clínico: Dolor.",
         questions: [
             { question: "Pregunta de ejemplo de Dolor", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
         ]
     },
     "Dolor Crónico": {
-        category: "Casos Clínicos",
+        category: "Fármaco",
         description: "Caso clínico: Dolor crónico.",
         questions: [
             { question: "Pregunta de ejemplo de Dolor Crónico", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
         ]
     },
     "Migraña": {
-        category: "Casos Clínicos",
+        category: "Fármaco",
         description: "Caso clínico: Migraña.",
         questions: [
             { question: "Pregunta de ejemplo de Migraña", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
         ]
     },
     "Hipertensión": {
-        category: "Casos Clínicos",
+        category: "Fármaco",
         description: "Caso Clínico: Hipertensión arterial.",
         questions: [
             { question: "Pregunta de ejemplo de HTA", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
         ]
     },
     "Cardiopatía Isquémica": {
-        category: "Casos Clínicos",
+        category: "Fármaco",
         description: "Caso Clínico: Cardiopatía isquémica.",
         questions: [
             { question: "Pregunta de ejemplo de Cardiopatía", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
         ]
     },
     "Falla Cardiaca": {
-        category: "Casos Clínicos",
+        category: "Fármaco",
         description: "Caso Clínico: Falla cardiaca.",
         questions: [
             { question: "Pregunta de ejemplo de Falla Cardiaca", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
         ]
     },
     "Diabetes Mellitus": {
-        category: "Casos Clínicos",
+        category: "Fármaco",
         description: "Caso Clínico: Diabetes mellitus.",
         questions: [
             { question: "Pregunta de ejemplo de Diabetes", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
         ]
     },
     "EPOC": {
-        category: "Casos Clínicos",
+        category: "Fármaco",
         description: "Caso Clínico: Enfermedad pulmonar obstructiva crónica.",
         questions: [
             { question: "Pregunta de ejemplo de EPOC", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
         ]
     },
     "Club de Revistas": {
-        category: "Investigación",
+        category: "Fármaco",
         description: "Exposición 2 (Club de revistas - artículo científico) (IdC) (M-activa).",
         questions: [
             { question: "Pregunta de ejemplo de Exposición", answers: [{ text: "Correcta", correct: true }, { text: "Incorrecta", correct: false }] }
@@ -222,17 +242,20 @@ function resetState() {
 function selectAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
-    if (isCorrect) {
-        selectedBtn.style.backgroundColor = "#90ee90";
-    } else {
-        selectedBtn.style.backgroundColor = "#ff9999";
-    }
+
+    // Itera sobre todos los botones para deshabilitarlos y mostrar la respuesta correcta
     Array.from(answerButtonsElement.children).forEach(button => {
-        if (button.dataset.correct === "true") {
-            button.style.backgroundColor = "#90ee90";
-        }
         button.disabled = true;
+        if (button.dataset.correct === "true") {
+            button.classList.add("correct");
+        }
     });
+
+    // Añade la clase 'incorrect' solo si el botón seleccionado no es el correcto
+    if (!isCorrect) {
+        selectedBtn.classList.add("incorrect");
+    }
+
     nextButton.style.display = "block";
 }
 
